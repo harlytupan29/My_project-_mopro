@@ -1,0 +1,389 @@
+echo "# My_project-_mopro" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/harlytupan29/My_project-_mopro.git
+git push -u origin master
+
+
+
+
+
+
+/*
+    1. let and const
+*/
+
+//ES5
+// var name5 = 'Jane Smith';
+// var age5 = 23;
+// name5 = 'Jane Miller';
+// console.log(name5);
+
+// //ES6
+// const name6 = 'Jane Smith';
+// let age6 = 23;
+// name6 = 'Jane Miller';
+// console.log(name6);
+
+//var -> function scope
+//let & const -> block scope
+
+//ES5
+// function driversLicence5(passedTest) {
+//     if (passedTest) {
+//         console.log(firstName);
+//         var firstName = 'John';
+//         var yearOfBirth = 1990;
+//     }
+//     console.log(firstName + ', born in ' + yearOfBirth +
+//         ', is now offically allowed to drive a car');
+// }
+
+// driversLicence5(true);
+
+// //ES6
+// function driversLicence6(passedTest) {
+//     const firstName = 'John';
+//     let yearOfBirth;
+
+//     if (passedTest) {
+//         yearOfBirth = 1990;
+//     }
+//     console.log(firstName + ', born in ' + yearOfBirth +
+//         ', is now offically allowed to drive a car');
+// }
+// driversLicence6(true);
+
+// let i = 23;
+
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+// }
+
+// console.log(i);
+
+/*
+    2. Strings
+*/
+
+// let firstName = 'John';
+// let lastName = 'Smith';
+// const yearOfBirth = 1990;
+
+// function calcAge(year) {
+//     return 2020 - year;
+// }
+
+// //ES5
+// console.log('This is ' + firstName + ' ' + lastName +
+//     '. He was born in ' + yearOfBirth + '. Today, he is ' +
+//     calcAge(yearOfBirth) + ' years old');
+
+// //ES6
+// console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old`);
+
+/*
+    3. Arrow Function
+*/
+
+//ES5
+// var calcAge = function (year) {
+//     return 2020 - year;
+// }
+
+//ES6
+// const calcAge = () => {
+//     let age = 2020 - 1987;
+//     console.log(age);
+// }
+
+// const calcAge = year => {
+//     let age = 2020 - year;
+//     console.log(age);
+// }
+
+// const calcAge = (year, currentYear) => {
+//     let age = currentYear - year;
+//     console.log(age);
+// }
+
+// let years = [1990, 1982, 1987, 1999];
+// //For
+// // for (let i = 0; i < 4; i++) {
+// //     console.log(years[i]);
+// // }
+
+// //ES5
+// //forEach
+// years.forEach(function (item, index) {
+//     console.log(item, index);
+// })
+
+// //ES6
+// years.forEach(el => console.log(2020 - el))
+
+// let age6 = years.map((el, index) => `${2020 - el} ${index}`);
+// console.log(age6);
+
+
+// Change to ES6 Syntax
+// var whatDoYouDo = function (job, firstName) {
+//     switch (job) {
+//         case 'teacher':
+//             return firstName + ' is a teacher';
+//         case 'driver':
+//             return firstName + ' is a driver';
+//         case 'designer':
+//             return firstName + ' is a designer';
+//         default:
+//             return firstName + ' does something else';
+//     }
+// }
+
+// const whatDoYouDo = (job, firstName) => {
+//     switch (job) {
+//         case 'teacher':
+//             return `${firstName} is a teacher`;
+//         case 'driver':
+//             return `${firstName} is a driver`;
+//         case 'designer':
+//             return `${firstName} is a designer`;
+//         default:
+//             return `${firstName} does something else`
+//     }
+// }
+
+/*
+    4. Map
+*/
+
+// let numbers = [1, 2, 3, 4, 5];
+// let result = [];
+// //for loop
+// // for (let i = 0; i < numbers.length; i++) {
+// //     result[i] = numbers[i] * 2;
+// // }
+// // console.log(result);
+
+// //map
+// //ES5
+// var res1 = numbers.map(function (number, index) {
+//     console.log(index);
+//     return number * 2;
+// })
+// console.log(res1);
+
+// //ES6
+// let res2 = numbers.map(number => number * 2);
+// console.log(res2);
+
+// let smartphones = [{
+//     name: 'Iphone',
+//     price: 1000
+// }, {
+//     name: 'Nokia',
+//     price: 200
+// }, {
+//     name: 'Samsung',
+//     price: 500
+// }];
+
+// //ES5
+// let price5 = smartphones.map(function (item) {
+//     return item.price;
+// })
+// console.log(price5);
+
+// //ES6
+// let price6 = smartphones.map(item => item.price);
+// console.log(price6);
+
+
+/*
+    5. Destructuring
+*/
+
+//Destructuring Array
+
+//ES5
+// var john5 = ['John', 28, true];
+// var firstName5 = john5[0];
+// var age5 = john5[1];
+// var isMarried5 = john5[2];
+
+// console.log(firstName5, age5, isMarried5);
+
+// //ES6
+// let john6 = ['John', 28, true];
+// const [firstName6, age6, isMarried6] = john6;
+// console.log(firstName6, age6, isMarried6);
+
+//Destructuring object
+
+// let obj = {
+//     firstName: 'John',
+//     age: 28,
+//     isMarried: true
+// }
+
+// //ES5
+// var firstName5 = obj.firstName;
+// var age5 = obj.age;
+// var isMarried5 = obj.isMarried;
+
+// console.log(firstName5, age5, isMarried5);
+
+// //ES6
+// const {
+//     firstName,
+//     age,
+//     isMarried
+// } = obj;
+
+// console.log(firstName, age, isMarried);
+
+// const {
+//     firstName: namaDepan,
+//     age: umur,
+//     isMarried: sudahMenikah
+// } = obj;
+// console.log(namaDepan, umur, sudahMenikah);
+
+// Destructuring array object
+// const cars = [
+//     {name: 'Toyota Agya', color: 'White'},
+//     {name: 'Daihatsu Xenia', color: 'Black'},
+//     {name: 'Pajero', color: 'Silver'}
+// ];
+
+// let [
+//     {color: c1, name: n1},
+//     {color: c2, name: n2},
+//     { color: c3, name: n3}
+// ] = cars;
+
+// console.log(c1, c2, c3);
+// console.log(n1, n2, n3);
+
+
+// let numbers = [1, 2, 3];
+
+// let [one, two, three] = numbers.map(number => number);
+
+// console.log(one, two, three);
+
+/*
+    6. Rest and Spread Operator
+*/
+
+//Rest
+//ES5
+// const addNumbers5 = function(a, b, c, d, e, f, g, h, i, j){
+//     let numbers = [a, b, c, d, e, f, g, h, i, j];
+//     let sum = 0;
+//     for(let i = 0; i < 5; i++){
+//         sum += numbers[i];
+//     }
+//     return sum;
+// } 
+
+// console.log(addNumbers5(1,2,3,4,5,6))
+
+// const addNumbers6 = (...numbers) => {
+//     console.log(numbers);
+//     let sum = 0;
+//     numbers.forEach(number => sum += number)
+//     return sum;
+// }
+
+// console.log(addNumbers6(1,2,3,4,5,6,7,8,9,10,11,12,13))
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let [one, two, three, ...rest] = numbers;
+// console.log(one, two, three)
+// console.log(rest);
+
+//Spread Operator
+// let color = ['Red', 'Green', 'Blue'];
+// let favoriteColor = ['Pink', 'Yellow', 'Purple'];
+// let defaultColor = ['Black', 'Silver'];
+
+// //ES5
+// let combineColor5 = color.concat(favoriteColor.concat(defaultColor));
+// console.log(combineColor5);
+
+// //ES6
+// let combineColor6 = [...color, 'Magenta', ...favoriteColor, ...defaultColor];
+// console.log(combineColor6);
+
+/*
+    7. Default Function Argument
+*/
+
+// const makeAjaxRequest = (url = 'www.google.com', method = 'GET') => {
+//     // if (!method) {
+//     //     method = 'GET';
+//     // }
+//     console.log(url, method);
+// }
+
+// makeAjaxRequest();
+// makeAjaxRequest('www.facebook.com')
+// makeAjaxRequest(undefined, 'POST');
+
+/*
+    8. Clasess
+*/
+
+// class Polygon {
+//     constructor(height, weight) {
+//         console.log("Constructor is running");
+//         this.height = height;
+//         this.weight = weight;
+//     }
+//     calcArea() {
+//         return this.height * this.weight;
+//     }
+
+// }
+
+// const polygon = new Polygon(10, 10);
+// console.log(polygon.calcArea());
+
+
+class Car {
+    constructor({ title }) {
+        console.log('Constructor class Car is running');
+        this.title = title;
+    }
+    getTitle() {
+        return this.title;
+    }
+}
+
+class Toyota extends Car {
+    constructor({ color }) {
+        super({ title: 'Toyota' });
+        this.color = color;
+        console.log('Constructor class Toyota is running');
+    }
+    getColor() {
+        return this.color;
+    }
+}
+
+const car = new Car({ title: 'Toyota' });
+console.log(car.getTitle());
+const toyota = new Toyota({ color: 'White' });
+
+
+
+
+
+
+
+script.js
+Displaying script.js.
+                
